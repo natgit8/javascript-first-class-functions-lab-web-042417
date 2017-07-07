@@ -1,5 +1,5 @@
 describe('index', function() {
-  describe('`countdown` function', function () {
+  describe('`countdown` function', function() {
     before(function() {
       let useFakeTimers = null;
 
@@ -16,7 +16,7 @@ describe('index', function() {
       this.clock.restore();
     });
 
-    it('should exist', function () {
+    it('should exist', function() {
       expect(countdown).toExist()
     });
 
@@ -32,42 +32,42 @@ describe('index', function() {
     });
   });
 
-  describe('`createMultiplier` function', function () {
-    it('should exist', function () {
+  describe('`createMultiplier` function', function() {
+    it('should exist', function() {
       expect(createMultiplier).toExist();
     });
 
-    it('should return a function', function () {
+    it('should return a function', function() {
       const doubler = createMultiplier(2);
       expect(doubler).toBeA('function');
     });
 
-    it('should multiply a given value using the created multiplier', function () {
+    it('should multiply a given value using the created multiplier', function() {
       const doubler = createMultiplier(2);
       expect(doubler(5)).toEqual(10);
     });
   });
 
-  describe('Multiplier functions created with `createMultiplierBonus`', function () {
-    it('should have a doubler function', function () {
+  describe('Multiplier functions created with `createMultiplierBonus`', function() {
+    it('should have a doubler function', function() {
       expect(doubler).toExist();
       expect(doubler).toBeA('function');
       expect(doubler(5)).toEqual(10);
     });
 
-    it('should have a tripler function', function () {
+    it('should have a tripler function', function() {
       expect(tripler).toExist();
       expect(tripler).toBeA('function');
       expect(tripler(5)).toEqual(15);
     });
   });
 
-  describe('`multiplier()` with partial application', function () {
-    it('should exist', function () {
+  describe('`multiplier()` with partial application', function() {
+    it('should exist', function() {
       expect(multiplier).toExist();
     });
 
-    it('should have a doubler function created using `.bind()`', function () {
+    it('should have a doubler function created using `.bind()`', function() {
       if (typeof server !== 'undefined' && server && !hasUsedBind) {
         throw new Error("No cheating! Make sure to use `.bind()` for this solution!");
       }
